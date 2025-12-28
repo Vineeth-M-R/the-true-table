@@ -1,0 +1,532 @@
+/* ========================================
+   THE TRUE TABLE - DESIGN SYSTEM
+   ======================================== */
+
+/* ========================================
+   CSS RESET & BASE STYLES
+   ======================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--color-bg-primary);
+  color: var(--color-text-primary);
+  line-height: 1.6;
+}
+
+/* ========================================
+   COLOR TOKENS
+   ======================================== */
+
+:root {
+  /* Primary Background Colors */
+  --color-bg-primary: #FAFAF8;
+  --color-bg-secondary: #F5F5F3;
+  --color-bg-muted: #EEEEEC;
+
+  /* Accent Colors - Orange */
+  --color-green-primary: #c28305;
+  --color-green-light: #d9a03d;
+  --color-green-dark: #9a6804;
+
+  /* Neutral Colors */
+  --color-neutral-warm: #8B7E74;
+  --color-neutral-dark: #4A4A4A;
+  --color-neutral-light: #D4D4D2;
+
+  /* Text Colors */
+  --color-text-primary: #2A2A2A;
+  --color-text-secondary: #5A5A5A;
+  --color-text-muted: #8B8B8B;
+  --color-text-inverse: #FAFAF8;
+
+  /* Accent & Highlights */
+  --color-accent: var(--color-green-primary);
+  --color-accent-hover: var(--color-green-dark);
+
+  /* Borders & Dividers */
+  --color-border: #E0E0DE;
+  --color-border-light: #ECECEA;
+}
+
+/* ========================================
+   TYPOGRAPHY SYSTEM
+   ======================================== */
+
+:root {
+  /* Font Sizes */
+  --font-size-xs: 0.75rem;
+  /* 12px */
+  --font-size-sm: 0.875rem;
+  /* 14px */
+  --font-size-base: 1rem;
+  /* 16px */
+  --font-size-lg: 1.125rem;
+  /* 18px */
+  --font-size-xl: 1.25rem;
+  /* 20px */
+  --font-size-2xl: 1.5rem;
+  /* 24px */
+  --font-size-3xl: 1.875rem;
+  /* 30px */
+  --font-size-4xl: 2.25rem;
+  /* 36px */
+  --font-size-5xl: 3rem;
+  /* 48px */
+  --font-size-6xl: 3.75rem;
+  /* 60px */
+  --font-size-7xl: 4.5rem;
+  /* 72px */
+
+  /* Font Weights */
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  /* Line Heights */
+  --line-height-tight: 1.2;
+  --line-height-snug: 1.4;
+  --line-height-normal: 1.6;
+  --line-height-relaxed: 1.8;
+  --line-height-loose: 2;
+}
+
+/* Typography Classes */
+.heading-hero {
+  font-size: var(--font-size-6xl);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-tight);
+  letter-spacing: -0.02em;
+}
+
+.heading-1 {
+  font-size: var(--font-size-5xl);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-tight);
+  letter-spacing: -0.01em;
+}
+
+.heading-2 {
+  font-size: var(--font-size-4xl);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-snug);
+}
+
+.heading-3 {
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-snug);
+}
+
+.heading-4 {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-normal);
+}
+
+.body-large {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-normal);
+  line-height: var(--line-height-relaxed);
+}
+
+.body-base {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-normal);
+  line-height: var(--line-height-relaxed);
+}
+
+.body-small {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-normal);
+  line-height: var(--line-height-normal);
+}
+
+/* ========================================
+   SPACING SYSTEM (8px base)
+   ======================================== */
+
+:root {
+  --space-1: 0.5rem;
+  /* 8px */
+  --space-2: 1rem;
+  /* 16px */
+  --space-3: 1.5rem;
+  /* 24px */
+  --space-4: 2rem;
+  /* 32px */
+  --space-5: 2.5rem;
+  /* 40px */
+  --space-6: 3rem;
+  /* 48px */
+  --space-8: 4rem;
+  /* 64px */
+  --space-10: 5rem;
+  /* 80px */
+  --space-12: 6rem;
+  /* 96px */
+  --space-16: 8rem;
+  /* 128px */
+  --space-20: 10rem;
+  /* 160px */
+  --space-24: 12rem;
+  /* 192px */
+}
+
+/* ========================================
+   LAYOUT UTILITIES
+   ======================================== */
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--space-4);
+}
+
+.container-narrow {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--space-4);
+}
+
+.container-wide {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 var(--space-4);
+}
+
+/* Section Spacing */
+.section {
+  padding: var(--space-16) 0;
+}
+
+.section-sm {
+  padding: var(--space-10) 0;
+}
+
+.section-lg {
+  padding: var(--space-20) 0;
+}
+
+/* ========================================
+   BUTTON STYLES
+   ======================================== */
+
+.btn {
+  display: inline-block;
+  padding: var(--space-3) var(--space-6);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-medium);
+  text-decoration: none;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.btn-primary {
+  background-color: var(--color-green-primary);
+  color: var(--color-text-inverse);
+  box-shadow: 0 2px 8px rgba(194, 131, 5, 0.2);
+}
+
+.btn-primary:hover {
+  background-color: var(--color-green-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(194, 131, 5, 0.3);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--color-text-primary);
+  border: 2px solid var(--color-border);
+}
+
+.btn-secondary:hover {
+  border-color: var(--color-green-primary);
+  color: var(--color-green-primary);
+}
+
+.btn-large {
+  padding: var(--space-4) var(--space-8);
+  font-size: var(--font-size-lg);
+}
+
+/* ========================================
+   ANIMATION UTILITIES
+   ======================================== */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.8s ease-out;
+}
+
+.slide-up {
+  animation: slideUp 0.8s ease-out;
+}
+
+.slide-in-left {
+  animation: slideInLeft 0.8s ease-out;
+}
+
+.slide-in-right {
+  animation: slideInRight 0.8s ease-out;
+}
+
+/* Scroll Animation Classes */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.animate-on-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ========================================
+   CARD STYLES
+   ======================================== */
+
+.card {
+  background-color: white;
+  border-radius: 8px;
+  padding: var(--space-6);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transform: translateY(-4px);
+}
+
+.card-minimal {
+  background-color: var(--color-bg-secondary);
+  border: 1px solid var(--color-border-light);
+  border-radius: 6px;
+  padding: var(--space-5);
+}
+
+/* ========================================
+   BADGE STYLES
+   ======================================== */
+
+.badge {
+  display: inline-block;
+  padding: var(--space-1) var(--space-3);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  border-radius: 20px;
+  background-color: var(--color-bg-muted);
+  color: var(--color-text-secondary);
+}
+
+.badge-green {
+  background-color: rgba(194, 131, 5, 0.15);
+  color: var(--color-green-dark);
+}
+
+/* ========================================
+   UTILITY CLASSES
+   ======================================== */
+
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-muted {
+  color: var(--color-text-muted);
+}
+
+.text-secondary {
+  color: var(--color-text-secondary);
+}
+
+.text-accent {
+  color: var(--color-accent);
+}
+
+.mb-1 {
+  margin-bottom: var(--space-1);
+}
+
+.mb-2 {
+  margin-bottom: var(--space-2);
+}
+
+.mb-3 {
+  margin-bottom: var(--space-3);
+}
+
+.mb-4 {
+  margin-bottom: var(--space-4);
+}
+
+.mb-6 {
+  margin-bottom: var(--space-6);
+}
+
+.mb-8 {
+  margin-bottom: var(--space-8);
+}
+
+.mt-1 {
+  margin-top: var(--space-1);
+}
+
+.mt-2 {
+  margin-top: var(--space-2);
+}
+
+.mt-3 {
+  margin-top: var(--space-3);
+}
+
+.mt-4 {
+  margin-top: var(--space-4);
+}
+
+.mt-6 {
+  margin-top: var(--space-6);
+}
+
+.mt-8 {
+  margin-top: var(--space-8);
+}
+
+/* ========================================
+   RESPONSIVE BREAKPOINTS
+   ======================================== */
+
+/* Tablet and below */
+@media (max-width: 768px) {
+  .heading-hero {
+    font-size: var(--font-size-4xl);
+  }
+
+  .heading-1 {
+    font-size: var(--font-size-3xl);
+  }
+
+  .heading-2 {
+    font-size: var(--font-size-2xl);
+  }
+
+  .heading-3 {
+    font-size: var(--font-size-xl);
+  }
+
+  .section {
+    padding: var(--space-10) 0;
+  }
+
+  .section-lg {
+    padding: var(--space-12) 0;
+  }
+
+  .container {
+    padding: 0 var(--space-3);
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .heading-hero {
+    font-size: var(--font-size-3xl);
+  }
+
+  .heading-1 {
+    font-size: var(--font-size-2xl);
+  }
+
+  .body-large {
+    font-size: var(--font-size-lg);
+  }
+
+  .btn-large {
+    padding: var(--space-3) var(--space-6);
+    font-size: var(--font-size-base);
+  }
+
+  .section {
+    padding: var(--space-8) 0;
+  }
+
+  .container {
+    padding: 0 var(--space-2);
+  }
+}

@@ -1,0 +1,54 @@
+.pilot {
+    background-color: var(--color-bg-primary);
+}
+
+.pilot-content {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.pilot-details {
+    background-color: white;
+    padding: var(--space-6);
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+    margin-bottom: var(--space-6);
+}
+
+.pilot-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.pilot-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-3);
+    padding: var(--space-3) 0;
+    border-bottom: 1px solid var(--color-border-light);
+}
+
+.pilot-list li:last-child {
+    border-bottom: none;
+}
+
+.pilot-bullet {
+    color: var(--color-green-primary);
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-bold);
+    flex-shrink: 0;
+}
+
+.pilot-goal {
+    padding: var(--space-5);
+    background-color: var(--color-bg-secondary);
+    border-radius: 8px;
+    text-align: center;
+    border-left: 4px solid var(--color-green-primary);
+}
+
+.pilot-goal p {
+    font-weight: var(--font-weight-medium);
+    color: var(--color-text-primary);
+}
