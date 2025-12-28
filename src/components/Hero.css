@@ -125,6 +125,13 @@
 
     .hero-title-overlay {
         font-size: var(--font-size-4xl);
+        padding: var(--space-2);
+        margin-bottom: var(--space-1);
+    }
+
+    .hero-subtitle-overlay {
+        font-size: var(--font-size-base);
+        padding: 0 var(--space-2);
     }
 
     .hero-content-section::before {
@@ -150,5 +157,17 @@
 
     .hero-title-overlay {
         font-size: var(--font-size-3xl);
+        padding: var(--space-1);
+        margin-bottom: 0;
+    }
+
+    .hero-subtitle-overlay {
+        font-size: var(--font-size-sm);
+        padding: 0 var(--space-1);
+    }
+
+    .hero-title-wrapper {
+        gap: var(--space-1);
+        padding: var(--space-2);
     }
 }

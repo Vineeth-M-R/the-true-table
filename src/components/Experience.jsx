@@ -15,7 +15,6 @@ function Experience() {
                         <div className="experience-label mb-4">
                             <span className="badge">Brand Discovery Card</span>
                         </div>
-                        <div className="brand-logo-placeholder mb-4">🌿</div>
                         <h4 className="heading-4 mb-3">Why this brand exists</h4>
                         <p className="body-base text-secondary mb-4">
                             A short, honest explanation of the brand's philosophy and what it stands for.
