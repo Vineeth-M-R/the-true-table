@@ -1,25 +1,6 @@
 import { useState } from 'react';
 import './Categories.css';
 
-// Import generated icons
-import staplesIcon from '/Users/vineethmr/.gemini/antigravity/brain/2794534c-1e3f-4c79-86a0-faa40709e485/staples_icon_1766914815783.png';
-import fruitsVegIcon from '/Users/vineethmr/.gemini/antigravity/brain/2794534c-1e3f-4c79-86a0-faa40709e485/fruits_vegetables_icon_1766914837650.png';
-import dairyEggsIcon from '/Users/vineethmr/.gemini/antigravity/brain/2794534c-1e3f-4c79-86a0-faa40709e485/dairy_eggs_icon_1766914852305.png';
-import kidsNutritionIcon from '/Users/vineethmr/.gemini/antigravity/brain/2794534c-1e3f-4c79-86a0-faa40709e485/kids_nutrition_icon_1766914867666.png';
-import packagedFoodsIcon from '/Users/vineethmr/.gemini/antigravity/brain/2794534c-1e3f-4c79-86a0-faa40709e485/packaged_foods_icon_1766914882398.png';
-import healthSupplementsIcon from '/Users/vineethmr/.gemini/antigravity/brain/2794534c-1e3f-4c79-86a0-faa40709e485/health_supplements_icon_1766915074750.png';
-import cleaningIcon from '/Users/vineethmr/.gemini/antigravity/brain/2794534c-1e3f-4c79-86a0-faa40709e485/cleaning_essentials_icon_1766915093298.png';
-import snacksIcon from '/Users/vineethmr/.gemini/antigravity/brain/2794534c-1e3f-4c79-86a0-faa40709e485/snacks_more_icon_1766915108166.png';
-
-// Import cropped product images
-import riceImg from '/Users/vineethmr/.gemini/antigravity/brain/2794534c-1e3f-4c79-86a0-faa40709e485/rice_cropped_1766917339872.png';
-import dalsImg from '/Users/vineethmr/.gemini/antigravity/brain/2794534c-1e3f-4c79-86a0-faa40709e485/dals_cropped_1766917355099.png';
-import milkImg from '/Users/vineethmr/.gemini/antigravity/brain/2794534c-1e3f-4c79-86a0-faa40709e485/milk_cropped_1766917372356.png';
-import breadImg from '/Users/vineethmr/.gemini/antigravity/brain/2794534c-1e3f-4c79-86a0-faa40709e485/bread_cropped_1766917392701.png';
-import eggsImg from '/Users/vineethmr/.gemini/antigravity/brain/2794534c-1e3f-4c79-86a0-faa40709e485/eggs_cropped_1766917408099.png';
-import cheeseImg from '/Users/vineethmr/.gemini/antigravity/brain/2794534c-1e3f-4c79-86a0-faa40709e485/cheese_cropped_1766917437454.png';
-import paneerImg from '/Users/vineethmr/.gemini/antigravity/brain/2794534c-1e3f-4c79-86a0-faa40709e485/paneer_cropped_1766917456441.png';
-
 function Categories() {
     const [selectedCategory, setSelectedCategory] = useState('staples');
 
@@ -27,14 +8,14 @@ function Categories() {
         {
             id: 'breads-dairy',
             name: 'Breads, Dairy & Eggs',
-            icon: dairyEggsIcon,
+            icon: '/dairy_eggs_icon.png',
             subcategories: [
-                { name: 'Breads & Bakery', image: breadImg },
-                { name: 'Milk', image: milkImg },
+                { name: 'Breads & Bakery', image: '/bread.png' },
+                { name: 'Milk', image: '/milk.png' },
                 { name: 'Curd', image: null },
-                { name: 'Eggs', image: eggsImg },
-                { name: 'Cheese', image: cheeseImg },
-                { name: 'Paneer', image: paneerImg },
+                { name: 'Eggs', image: '/eggs.png' },
+                { name: 'Cheese', image: '/cheese.png' },
+                { name: 'Paneer', image: '/paneer.png' },
                 { name: 'Butter', image: null },
                 { name: 'Yogurt', image: null }
             ]
@@ -42,10 +23,10 @@ function Categories() {
         {
             id: 'staples',
             name: 'Staples',
-            icon: staplesIcon,
+            icon: '/staples_icon.png',
             subcategories: [
-                { name: 'Rice', image: riceImg },
-                { name: 'Dals', image: dalsImg },
+                { name: 'Rice', image: '/rice.png' },
+                { name: 'Dals', image: '/dals.png' },
                 { name: 'Millets & Grains', image: null },
                 { name: 'Flours', image: null },
                 { name: 'Nuts, Seeds & Mixes', image: null },
@@ -57,7 +38,7 @@ function Categories() {
         {
             id: 'kids-nutrition',
             name: 'Kids Food & Nutrition',
-            icon: kidsNutritionIcon,
+            icon: '/kids_nutrition_icon.png',
             subcategories: [
                 { name: 'Baby Food', image: null },
                 { name: 'Kids Snacks', image: null },
@@ -68,7 +49,7 @@ function Categories() {
         {
             id: 'packaged-foods',
             name: 'Packaged Foods',
-            icon: packagedFoodsIcon,
+            icon: '/packaged_foods_icon.png',
             subcategories: [
                 { name: 'Tea', image: null },
                 { name: 'Coffee', image: null },
@@ -81,7 +62,7 @@ function Categories() {
         {
             id: 'snacks',
             name: 'Snacks & More',
-            icon: snacksIcon,
+            icon: '/snacks_icon.png',
             subcategories: [
                 { name: 'Munchies & Snacks', image: null },
                 { name: 'Chocolates', image: null },
@@ -95,7 +76,7 @@ function Categories() {
         {
             id: 'health-supplements',
             name: 'Health Supplements',
-            icon: healthSupplementsIcon,
+            icon: '/health_supplements_icon.png',
             subcategories: [
                 { name: 'Protein Supplements', image: null },
                 { name: 'Nutraceuticals', image: null },
