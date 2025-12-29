@@ -5,6 +5,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import HomePage from './pages/HomePage';
 import CategoriesPage from './pages/CategoriesPage';
+import WaitlistPage from './pages/WaitlistPage';
 
 function AppContent() {
   const location = useLocation();
@@ -44,6 +45,7 @@ function AppContent() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/categories" element={<CategoriesPage />} />
+        <Route path="/waitlist" element={<WaitlistPage />} />
       </Routes>
       {showFooter && <Footer />}
     </div>

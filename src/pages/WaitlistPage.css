@@ -1,0 +1,249 @@
+.waitlist-page {
+    min-height: 100vh;
+    padding-top: 100px;
+    padding-bottom: 80px;
+    background: linear-gradient(135deg, #f5f3f0 0%, #e8e5e0 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.waitlist-container {
+    max-width: 600px;
+    width: 100%;
+    padding: 0 24px;
+}
+
+.waitlist-content {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 60px 48px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.waitlist-content.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.waitlist-title {
+    font-size: 42px;
+    font-weight: 600;
+    color: #2d3436;
+    margin: 0 0 16px 0;
+    text-align: center;
+    letter-spacing: -0.02em;
+}
+
+.waitlist-subtitle {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #636e72;
+    margin: 0 0 48px 0;
+    text-align: center;
+}
+
+.waitlist-form {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group label {
+    font-size: 14px;
+    font-weight: 500;
+    color: #2d3436;
+    letter-spacing: 0.01em;
+}
+
+.form-group input {
+    padding: 16px 20px;
+    font-size: 16px;
+    border: 2px solid #e8e5e0;
+    border-radius: 12px;
+    background: #ffffff;
+    color: #2d3436;
+    transition: all 0.3s ease;
+    font-family: inherit;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #6c8f7c;
+    box-shadow: 0 0 0 4px rgba(108, 143, 124, 0.1);
+}
+
+.form-group input::placeholder {
+    color: #b2bec3;
+}
+
+.form-group input:disabled {
+    background-color: #f5f3f0;
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+.error-message {
+    background-color: #fff5f5;
+    border: 2px solid #fc8181;
+    border-radius: 12px;
+    padding: 16px 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 8px;
+}
+
+.error-icon {
+    font-size: 24px;
+    color: #e53e3e;
+    flex-shrink: 0;
+}
+
+.error-message p {
+    margin: 0;
+    font-size: 14px;
+    color: #c53030;
+    font-weight: 500;
+}
+
+.submit-btn {
+    margin-top: 16px;
+    padding: 18px 32px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #ffffff;
+    background: linear-gradient(135deg, #6c8f7c 0%, #5a7a6a 100%);
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    letter-spacing: 0.02em;
+}
+
+.submit-btn:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(108, 143, 124, 0.3);
+}
+
+.submit-btn:active:not(:disabled) {
+    transform: translateY(0);
+}
+
+.submit-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.success-message {
+    text-align: center;
+    padding: 40px 0;
+}
+
+.success-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 24px;
+    background: linear-gradient(135deg, #6c8f7c 0%, #5a7a6a 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 48px;
+    color: #ffffff;
+    animation: scaleIn 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.success-message h2 {
+    font-size: 32px;
+    font-weight: 600;
+    color: #2d3436;
+    margin: 0 0 12px 0;
+}
+
+.success-message p {
+    font-size: 18px;
+    color: #636e72;
+    margin: 0;
+}
+
+@keyframes scaleIn {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .waitlist-page {
+        padding-top: 80px;
+        padding-bottom: 60px;
+    }
+
+    .waitlist-content {
+        padding: 40px 32px;
+    }
+
+    .waitlist-title {
+        font-size: 32px;
+    }
+
+    .waitlist-subtitle {
+        font-size: 16px;
+        margin-bottom: 36px;
+    }
+
+    .form-group input {
+        padding: 14px 18px;
+        font-size: 15px;
+    }
+
+    .submit-btn {
+        padding: 16px 28px;
+        font-size: 15px;
+    }
+
+    .success-icon {
+        width: 64px;
+        height: 64px;
+        font-size: 36px;
+    }
+
+    .success-message h2 {
+        font-size: 26px;
+    }
+
+    .success-message p {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .waitlist-content {
+        padding: 32px 24px;
+    }
+
+    .waitlist-title {
+        font-size: 28px;
+    }
+}

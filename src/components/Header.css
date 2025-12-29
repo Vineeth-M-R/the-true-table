@@ -95,6 +95,25 @@
     box-shadow: 0 4px 12px rgba(194, 131, 5, 0.3);
 }
 
+.nav-link-secondary {
+    background-color: transparent;
+    color: var(--color-green-primary);
+    padding: var(--space-2) var(--space-4);
+    border: 2px solid var(--color-green-primary);
+    border-radius: 4px;
+}
+
+.nav-link-secondary::after {
+    display: none;
+}
+
+.nav-link-secondary:hover {
+    background-color: var(--color-green-primary);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(108, 143, 124, 0.2);
+}
+
 /* Mobile Responsiveness */
 @media (max-width: 768px) {
     .header-nav {
@@ -120,6 +139,11 @@
     }
 
     .nav-link-primary {
+        padding: var(--space-1) var(--space-3);
+        font-size: var(--font-size-sm);
+    }
+
+    .nav-link-secondary {
         padding: var(--space-1) var(--space-3);
         font-size: var(--font-size-sm);
     }
