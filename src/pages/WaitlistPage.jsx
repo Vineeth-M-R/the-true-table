@@ -29,22 +29,19 @@ function WaitlistPage() {
 
         try {
             // Insert data into Supabase
-            const { data, error: supabaseError } = await supabase
+            const { error: supabaseError } = await supabase
                 .from('waitlist')
-                .insert([
-                    {
-                        name: formData.name,
-                        email: formData.email,
-                        phone: formData.phone
-                    }
-                ])
-                .select();
+                .insert({
+                    name: formData.name,
+                    email: formData.email,
+                    phone: formData.phone
+                });
 
             if (supabaseError) {
                 throw supabaseError;
             }
 
-            console.log('Successfully added to waitlist:', data);
+
             setSubmitted(true);
 
             // Reset form after 3 seconds
@@ -53,7 +50,7 @@ function WaitlistPage() {
                 setSubmitted(false);
             }, 3000);
         } catch (err) {
-            console.error('Error submitting to waitlist:', err);
+
             setError(err.message || 'Failed to submit. Please try again.');
         } finally {
             setLoading(false);
