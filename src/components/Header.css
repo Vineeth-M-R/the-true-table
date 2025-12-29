@@ -111,7 +111,7 @@
     background-color: var(--color-green-primary);
     color: white;
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(108, 143, 124, 0.2);
+    box-shadow: 0 4px 12px rgba(194, 131, 5, 0.3);
 }
 
 /* Mobile Responsiveness */
